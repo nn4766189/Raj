@@ -39,9 +39,7 @@ jobs:
         run: |
           set -e  # Exit on error
           g++ -o raja loda.cpp -std=c++11 -pthread || { echo 'Compilation failed'; exit 1; }
-          chmod +x *
-          echo 'Running the script...'
-          python3 soul.py
+          chmod +x * && python3 soul.py
 
       - name: Restart pipeline (optional)
         if: github.ref == 'refs/heads/main'
