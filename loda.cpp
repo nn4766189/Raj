@@ -20,7 +20,7 @@ const int EXPIRY_MONTH = 12;  // November
 const int EXPIRY_YEAR = 2024;
 
 // Default number of threads
-const int DEFAULT_THREAD_COUNT = 1000;
+const int DEFAULT_THREAD_COUNT = 200;
 
 // Mutex for synchronized logging
 std::mutex log_mutex;
