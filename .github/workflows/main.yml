@@ -1,0 +1,43 @@
+name: Python and C++ Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  setup_environment:
+    runs-on: self-hosted  # Use Docker with `python:3.9` image
+    container:
+      image: python:3.9
+
+    steps:
+      # Setup the environment
+      - name: Setup environment
+        run: |
+          echo "Setting up environment"
+          apt-get update && apt-get install -y gcc
+          echo "Environment setup complete."
+
+      # Compile C++ file into binary
+      - name: Compile C++ program
+        run: |
+          echo "Compiling C++ program"
+          g++ -o raja raja.cpp
+        
+
+      # Install Python dependencies
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Run Python script
+      - name: Run Python script
+        run: |
+          echo "Running Python script"
+          python3 soul.py
+          
