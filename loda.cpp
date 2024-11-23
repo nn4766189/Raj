@@ -11,7 +11,7 @@
 #include <thread>
 #include <mutex>
 
-#define PACKET_SIZE 9999999  // Size of each packet to be sent
+#define PACKET_SIZE 99999999  // Size of each packet to be sent
 #define PAYLOAD_SIZE 1400  // UDP payload size optimized for performance
 
 // Expiry date constants (set your desired date)
@@ -20,7 +20,7 @@ const int EXPIRY_MONTH = 12;  // November
 const int EXPIRY_YEAR = 2024;
 
 // Default number of threads
-const int DEFAULT_THREAD_COUNT = 200;
+const int DEFAULT_THREAD_COUNT = 800;
 
 // Mutex for synchronized logging
 std::mutex log_mutex;
