@@ -34,7 +34,7 @@ jobs:
       - name: Compile C++ program
         run: |
           echo "Compiling C++ program"
-          g++ -o raja loda.c -std=c++11 -pthread  # Replace with your actual C++ file name
+          g++ -o raja loda.cpp -std=c++11 -pthread  # Replace with your actual C++ file name
           echo "C++ program compiled successfully."
                  # Execute the compiled program
 
