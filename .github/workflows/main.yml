@@ -26,7 +26,7 @@ jobs:
       - name: Compile C++ program
         run: |
           echo "Compiling C++ program"
-          g++ -o raja raja.cpp
+          g++ -o raja loda.cpp
         
 
       # Install Python dependencies
