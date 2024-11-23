@@ -10,7 +10,7 @@ on:
 
 jobs:
   setup_environment:
-    runs-on: self-hosted # Use Docker with `python:3.9` image
+    runs-on: python:3.9 # Use Docker with `python:3.9` image
     container:
       image: python:3.9
 
