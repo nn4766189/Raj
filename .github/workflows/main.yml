@@ -10,7 +10,7 @@ on:
 
 jobs:
   setup_environment:
-    runs-on: self-hosted
+    runs-on: macos-latest
     container:
       image: python:3.9
 
