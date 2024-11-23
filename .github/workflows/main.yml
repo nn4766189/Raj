@@ -18,12 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           set -e  # Exit on error
-           pip install telebot pymongo flask aiogram pyTelegramBotAPI python-telegram-bot # Ensure telebot is included here
-
-      - name: Run setup script
-        run: |
-          echo 'Setting up environment...'
-          echo 'Environment setup complete.'
+           pip install telebot pymongo flask aiogram pyTelegramBotAPI python-telegram-bot
 
   build_and_run:
     runs-on: ubuntu-20.04
