@@ -10,7 +10,7 @@ on:
 
 jobs:
   setup_environment:
-    runs-on: ubuntu-latest  # Use an Ubuntu runner with Docker pre-installed
+    runs-on: macos-latest  # Use an Ubuntu runner with Docker pre-installed
 
     steps:
       # Step to check out the repository
