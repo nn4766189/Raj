@@ -30,7 +30,7 @@ jobs:
       
       - name: Build Docker image
         run: |
-          docker build -t my-python-raja .
+          docker build -t my-python-soul.py
 
       - name: Run setup script in Docker
         run: |
