@@ -35,4 +35,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run the Python script and C++ program when the container launches
-CMD ["bash", "-c", "./my_program && python soul.py"]
+CMD ["bash", "-c", "python soul.py"]
