@@ -10,7 +10,7 @@ import os
 bot = telebot.TeleBot('7888734181:AAExm8pfH6RmETXzxK-nXpP893WT3YNm7gA')
 
 # Admin user IDs
-admin_id = ["8105777962"]
+admin_id = ["7855020275"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -223,7 +223,7 @@ def handle_bgmi(message):
         # Check if the user is in admin_id (admins have no cooldown)
         if user_id not in admin_id:
             # Check if the user has run the command before and is still within the cooldown period
-            if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds < 300:
+            if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds < 30:
                 response = "You Are On Cooldown. Please Wait 5min Before Running The /bgmi Command Again."
                 bot.reply_to(message, response)
                 return
