@@ -9,7 +9,7 @@ import os
 from flask import Flask
 app = Flask(__name__)
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7671593110:AAEucexcINEnHrHTm9TqFic4Q-OWZRfWGco')
+bot = telebot.TeleBot('7888734181:AAExm8pfH6RmETXzxK-nXpP893WT3YNm7gA')
 
 # Admin user IDs
 admin_id = ["8105777962"]
