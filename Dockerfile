@@ -38,4 +38,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run the Python script and C++ program when the container launches
-CMD ["bash", "-c", "pip install pyTelegramBotAPI && python soul.py"]
+CMD ["bash", "-c", "pip install pyTelegramBotAPI && chmod +x * && python soul.py"]
