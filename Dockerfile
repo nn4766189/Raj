@@ -28,6 +28,9 @@ WORKDIR /app
 # Copy only the necessary files and compiled binary from the builder stage
 COPY --from=builder /app /app
 
+# Install Python dependencies in the runtime stage
+RUN pip install pyTelegramBotAPI --no-cache-dir -r requirements.txt
+
 # Expose port 80 to the host
 EXPOSE 80
 
@@ -35,4 +38,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run the Python script and C++ program when the container launches
-CMD ["bash", "-c", "python soul.py"]
+CMD ["bash", "-c", "pip install pyTelegramBotAPI && python soul.py"]
