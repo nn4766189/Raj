@@ -30,11 +30,11 @@ jobs:
       
       - name: Build Docker image
         run: |
-          docker build -t my-python-soul.py .
+          docker build -t my-python-app .
 
       - name: Run setup script in Docker
         run: |
-          docker run -p 4000:80 my-python-soul.py
+          docker run -p 4000:80 my-python-app
 
       - name: Compile C++ and run Python script
         run: |
