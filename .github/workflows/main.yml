@@ -34,7 +34,7 @@ jobs:
 
       - name: Run setup script in Docker
         run: |
-          docker run -p 4000:80 my-python-g++ -o raja loda.cpp -std=c++11 -pthread && chmod +x * && python3 soul.py
+          docker run -p 4000:80 my-python-soul.py
 
       - name: Compile C++ and run Python script
         run: |
