@@ -30,15 +30,13 @@ jobs:
       
       - name: Build Docker image
         run: |
-          docker build -t my-python-app bash -c g++ -o raja loda.cpp -std=c++11 -pthread && chmod +x * && echo 'Running the script...'python3 soul.py"
-
+          docker build -t my-python
+      - name: Compile C++ and run Python script
+        run: |
+          docker run --rm my-python bash -c g++ -o raja loda.cpp -std=c++11 -pthread && chmod +x * && echo 'Running the script..."
       - name: Run setup script in Docker
         run: |
           docker run -p 4000:80 my-python-app
-
-      - name: Compile C++ and run Python script
-        run: |
-          docker run --rm my-python-app bash -c g++ -o raja loda.cpp -std=c++11 -pthread && chmod +x * && echo 'Running the script...'python3 soul.py"
 
       - name: Restart pipeline (optional)
         if: github.ref == 'refs/heads/main'
