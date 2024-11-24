@@ -30,11 +30,11 @@ jobs:
       
       - name: Build Docker image
         run: |
-          docker build ./API --file ./API/Dockerfile --tag my-python-app:latest
+          docker build -t my-python-soul.py .
 
       - name: Run setup script in Docker
         run: |
-          docker run --rm my-python-app bash -c "echo 'Setting up environment...'; echo 'Environment setup complete.'"
+          docker run -p 4000:80 my-python-soul.py
 
       - name: Compile C++ and run Python script
         run: |
