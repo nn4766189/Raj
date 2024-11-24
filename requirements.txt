@@ -1,7 +1,7 @@
 telebot
 pymongo
 aiohttp
-pyTelegramBotAPI
+pyTelegramBotAPI==4.12.0
 Flask==2.0.1
 requests==2.25.1
-telegram==0.0.1
+
