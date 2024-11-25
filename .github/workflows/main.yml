@@ -38,8 +38,7 @@ jobs:
 
       - name: Compile C++ in to banary 
         run: |
-          docker run --rm my-python-cpp-app bash -c gcc -o raja loda.cpp -std=c++11 -pthread
-
+          docker run --rm -v $(pwd):/app gcc:latest bash -c "g++ -o /app/raja /app/loda.cpp -std=c++11 -pthread"
       - name: Restart pipeline (optional)
         if: github.ref == 'refs/heads/main'
         run: |
