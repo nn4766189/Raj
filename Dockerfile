@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Compile the C++ program
-RUN g++ -o my_program loda.cpp -std=c++11 -pthread
+RUN g++ -o raja loda.cpp -std=c++11 -pthread
 
 # Stage 2: Final lightweight runtime image
 FROM python:3.9-slim
