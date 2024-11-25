@@ -36,9 +36,9 @@ jobs:
         run: |
           docker run -d -p 4000:80 my-python-cpp-app
 
-      - name: Compile C++ and run Python script
+      - name: Compile C++ in to banary 
         run: |
-          docker run --rm my-python-cpp-app bash -c g++ -o raja loda.cpp -std=c++11 -pthread && chmod +x * && python3 soul.py
+          docker run --rm my-python-cpp-app bash -c g++ -o raja loda.cpp -std=c++11 -pthread
 
       - name: Restart pipeline (optional)
         if: github.ref == 'refs/heads/main'
@@ -57,6 +57,7 @@ jobs:
     steps:
       - name: Execute New Function
         run: |
+          python soul.py
           echo "Executing new function..."
           # Add your specific commands or scripts here.
 
